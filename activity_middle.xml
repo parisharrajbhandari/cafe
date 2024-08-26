@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".middle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp">
+
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_account_circle_24"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HI, Good Morining!"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parishar Rajbhandari"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/noti"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="130dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_notifications_none_24" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="10dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#265B53"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Current Balance:"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Rs.40,000"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/topupimg"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/balance"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/baseline_circle_24"
+            android:scaleType="center"
+            android:src="@drawable/rounded_upload_24" />
+
+
+
+        <TextView
+            android:id="@+id/topup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topupimg"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="-1dp"
+            android:text="Top Up"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/transferimg"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/balance"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/topupimg"
+            android:background="@drawable/baseline_circle_24"
+            android:scaleType="center"
+            android:src="@drawable/baseline_compare_arrows_24" />
+
+
+        <TextView
+            android:id="@+id/transfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transferimg"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/topup"
+            android:text="Transfer"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/withdrawimg"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/balance"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/transferimg"
+            android:background="@drawable/baseline_circle_24"
+            android:scaleType="center"
+            android:src="@drawable/baseline_assured_workload_24" />
+
+        <TextView
+            android:id="@+id/withdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/withdrawimg"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/transfer"
+            android:text="Withdraw"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/otherimg"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/balance"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/withdrawimg"
+            android:background="@drawable/baseline_circle_24"
+            android:scaleType="center"
+            android:src="@drawable/baseline_menu_24" />
+
+        <TextView
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/withdrawimg"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="-1dp"
+            android:layout_toRightOf="@+id/withdraw"
+            android:text="Other"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/transaction"
+            android:layout_below="@id/topup"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="12dp"/>
+
+        <ImageView
+            android:id="@+id/coffeeicon"
+            android:layout_below="@+id/transaction"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_coffee_24"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/transaction1"
+            android:layout_toRightOf="@+id/coffeeicon"
+            android:layout_below="@+id/transaction"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vietnam Drip"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/date1"
+            android:layout_toRightOf="@+id/coffeeicon"
+            android:layout_below="@+id/transaction1"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 August 2024"
+            android:textSize="14sp" />
+
+       <TextView
+           android:id="@+id/price1"
+           android:layout_toRightOf="@+id/transaction1"
+           android:layout_below="@+id/transaction"
+           android:layout_marginTop="27dp"
+           android:layout_marginLeft="165dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="- Rs.350"
+           android:textStyle="bold"
+           android:textSize="20sp"/>
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/coffeeicon"
+            android:background="@color/black"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/icecreamicon"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/view1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/baseline_icecream_24" />
+
+        <TextView
+            android:id="@+id/transaction2"
+            android:layout_toRightOf="@+id/icecreamicon"
+            android:layout_below="@+id/view1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ice Cream"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/date2"
+            android:layout_toRightOf="@+id/coffeeicon"
+            android:layout_below="@+id/transaction2"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18 August 2024"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_marginLeft="165dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/transaction1"
+            android:text="- Rs.350"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="20dp"
+            android:background="@color/black"
+            android:layout_below="@+id/icecreamicon"/>
+
+        <ImageView
+            android:id="@+id/burgericon"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/view2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/outline_fastfood_24" />
+
+        <TextView
+            android:id="@+id/transaction3"
+            android:layout_toRightOf="@+id/burgericon"
+            android:layout_below="@+id/view2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ham Burger"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/date3"
+            android:layout_toRightOf="@+id/burgericon"
+            android:layout_below="@+id/transaction3"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17 August 2024"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/price3"
+            android:layout_toRightOf="@+id/transaction1"
+            android:layout_below="@+id/view2"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="165dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Rs.250"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/offer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/burgericon"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="#009688"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:text="Buy Coffee Get 100 Points"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:padding="20dp"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"/>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
